@@ -28,6 +28,7 @@
   failed_when: false
 
 - name: Linux/Unix | Install Terraform
+  become: true
   ansible.builtin.unarchive:
     src: "{{ terraform_pkg_url }}"
     dest: "{{ terraform_path }}"
